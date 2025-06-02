@@ -1,0 +1,3 @@
+[submodule "typescript"]
+	path = typescript
+	url = git@github.com:tmol4/material-color-utilities-typescript.git
