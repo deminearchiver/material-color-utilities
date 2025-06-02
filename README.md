@@ -22,17 +22,12 @@ develop color themes and schemes in your app.
 
 ## Library availability
 
-| Language   | Availability | Location |
-| ---------- | -----------  | -------- |
-| C++        | ✅           |
-| Dart       | ✅           |
-| Java       | ✅           |
-| Swift      | ✅           |
-| TypeScript | ✅           |
-
-Need another platform/language? Check the
-[existing issues](https://github.com/material-foundation/material-color-utilities/labels/library%3A%20new)
-or open a new one.
+| Language   | Availability & location |
+| - | - |
+| Java  | ✅ [`/java`](/java) |
+| TypeScript | ✅ [`/typescript`](https://github.com/tmol4/material-color-utilities-typescript) |
+| Dart | ❌ [`/dart`](https://github.com/tmol4/material-color-utilities-dart) - coming soon |
+| Rust | ❌ [`/rust`](https://github.com/tmol4/material-color-utilities-rust) - coming soon |
 
 ## Capabilities Overview
 
