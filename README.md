@@ -25,9 +25,9 @@ develop color themes and schemes in your app.
 | Language   | Availability & location |
 | - | - |
 | Java  | ✅ [`/java`](/java) |
-| TypeScript | ✅ [`/typescript`](https://github.com/tmol4/material-color-utilities-typescript) |
-| Dart | ❌ [`/dart`](https://github.com/tmol4/material-color-utilities-dart) - coming soon |
-| Rust | ❌ [`/rust`](https://github.com/tmol4/material-color-utilities-rust) - coming soon |
+| TypeScript | ✅ [`/typescript`](https://github.com/deminearchiver/material-color-utilities-typescript) |
+| Dart | ❌ [`/dart`](https://github.com/deminearchiver/material-color-utilities-dart) - coming soon |
+| Rust | ❌ [`/rust`](https://github.com/deminearchiver/material-color-utilities-rust) - coming soon |
 
 ## Capabilities Overview
 
