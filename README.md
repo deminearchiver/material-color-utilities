@@ -22,13 +22,24 @@ develop color themes and schemes in your app.
 
 ## Library availability
 
-| Language   | Availability & location |
-| - | - |
-| Java  | ✅ [`/java`](/java) |
-| TypeScript | ✅ [`/typescript`](https://github.com/deminearchiver/material-color-utilities-typescript) |
-| Rust | ☑️ [`/rust`](https://github.com/deminearchiver/material-color-utilities-rust) - work in progress |
-| Dart | ☑️ [`/dart`](https://github.com/deminearchiver/evolve/tree/main/packages/mcu) - available separately |
-<!-- | Dart | ☑️ [`/dart`](https://github.com/deminearchiver/material-color-utilities-dart) - available separately | -->
+* **✅ Completely available**
+* **⚙️ Partially available**
+* **🚧 Unavailable (planned)**
+* **🚫 Unavailable (not planned)**
+* <sup>ref</sup> - reference implementation
+* <sup>port</sup> - port
+
+| Language | Availability | Location |
+| - | - | - |
+| Java<sup>ref</sup>  | ✅ - reference implementation | [`/java`](/java) |
+| TypeScript<sup>ref</sup> | ✅ - reference implementation | [`/typescript`](https://github.com/deminearchiver/material-color-utilities-typescript) |
+| Rust<sup>port</sup> | ⚙️ - work in progress | [`/rust`](https://github.com/deminearchiver/material-color-utilities-rust) |
+| Dart<sup>port</sup> | ⚙️ - available separately | [`/dart`](https://github.com/deminearchiver/evolve/tree/main/packages/mcu) |
+| WASM<sup>port</sup>  | 🚧 - use Rust bindings | `/wasm` |
+| Kotlin<sup>port</sup>  | 🚧 - use Java bindings | `/kotlin` |
+| C++<sup>ref</sup> | 🚫 - use Rust bindings | `/cpp` |
+| Swift<sup>ref</sup> | 🚫 - out of scope of this library | `/swift` |
+<!-- | Dart | ✅ - available separately | [`/dart`](https://github.com/deminearchiver/material-color-utilities-dart) | -->
 
 ## Capabilities Overview
 
