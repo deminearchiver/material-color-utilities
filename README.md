@@ -26,8 +26,9 @@ develop color themes and schemes in your app.
 | - | - |
 | Java  | ✅ [`/java`](/java) |
 | TypeScript | ✅ [`/typescript`](https://github.com/deminearchiver/material-color-utilities-typescript) |
-| Dart | ❌ [`/dart`](https://github.com/deminearchiver/material-color-utilities-dart) - coming soon |
-| Rust | ❌ [`/rust`](https://github.com/deminearchiver/material-color-utilities-rust) - coming soon |
+| Rust | ☑️ [`/rust`](https://github.com/deminearchiver/material-color-utilities-rust) - work in progress |
+| Dart | ☑️ [`/dart`](https://github.com/deminearchiver/evolve/tree/main/packages/mcu) - available separately |
+<!-- | Dart | ☑️ [`/dart`](https://github.com/deminearchiver/material-color-utilities-dart) - available separately | -->
 
 ## Capabilities Overview
 
