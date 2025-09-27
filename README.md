@@ -14,15 +14,14 @@ Algorithms and utilities that power the Material Design 3 (M3) color system, inc
 | Language | Availability | Location |
 | - | - | - |
 | Java<sup>ref</sup>  | ✅ (original implementation) | [`/java`](/java) |
+| Kotlin<sup>ref</sup>  | 🚧 (work in progress) | [`/kotlin`](/kotlin) |
 | TypeScript<sup>ref</sup> | ✅ (with customizations) | [`/typescript`](https://github.com/deminearchiver/material-color-utilities-typescript) |
 | Rust<sup>port</sup> | ⚙️ (work in progress) | [`/rust`](https://github.com/deminearchiver/material-color-utilities-rust) |
 | Dart<sup>port</sup> | ⚙️ (work in progress) | [`/dart`](https://github.com/deminearchiver/material-color-utilities-dart) |
 | WASM<sup>port</sup>  | 🚧 (based on Rust bindings) | `/wasm` |
-| Kotlin<sup>port</sup>  | 🚧 (based on Java bindings) | `/kotlin` |
 | C<sup>port</sup> | 🚧 (based on Rust bindings) | `/c` |
 | C++<sup>ref</sup> | 🚧 (based on Rust bindings) | `/cpp` |
 | Swift<sup>ref</sup> | 🚫 (out of scope of this library) | `/swift` |
-
 
 ## About
 
