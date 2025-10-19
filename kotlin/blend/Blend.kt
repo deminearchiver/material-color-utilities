@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,6 @@ import kotlin.math.min
 
 /** Functions for blending in HCT and CAM16. */
 object Blend {
-
   /**
    * Blend the design color's HCT hue towards the key color's HCT hue, in a way that leaves the
    * original color recognizable and recognizably shifted towards the key color.

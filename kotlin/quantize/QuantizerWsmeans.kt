@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ import kotlin.math.sqrt
  * Performance of K-Means for Color Quantization. https://arxiv.org/abs/1101.0395
  */
 object QuantizerWsmeans {
-  private class Distance internal constructor() : Comparable<Distance> {
+  private class Distance() : Comparable<Distance> {
     var index = -1
     var distance = -1.0
 
@@ -99,7 +99,7 @@ object QuantizerWsmeans {
     if (additionalClustersNeeded > 0) {
       for (i in 0 until additionalClustersNeeded) {}
     }
-    val clusterIndices = IntArray(pointCount) { i -> random.nextInt(clusterCount) }
+    val clusterIndices = IntArray(pointCount) { random.nextInt(clusterCount) }
     val indexMatrix = Array(clusterCount) { IntArray(clusterCount) }
     val distanceToIndexMatrix = Array(clusterCount) { Array(clusterCount) { Distance() } }
     val pixelCountSums = IntArray(clusterCount)

@@ -1,5 +1,5 @@
 /*
- * Copyright 2022 Google LLC
+ * Copyright 2025 Google LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -236,30 +236,6 @@ open class DynamicScheme(
 
   val onTertiaryFixedVariant: Int
     get() = getArgb(MaterialDynamicColors().onTertiaryFixedVariant())
-
-  val controlActivated: Int
-    get() = getArgb(MaterialDynamicColors().controlActivated())
-
-  val controlNormal: Int
-    get() = getArgb(MaterialDynamicColors().controlNormal())
-
-  val controlHighlight: Int
-    get() = getArgb(MaterialDynamicColors().controlHighlight())
-
-  val textPrimaryInverse: Int
-    get() = getArgb(MaterialDynamicColors().textPrimaryInverse())
-
-  val textSecondaryAndTertiaryInverse: Int
-    get() = getArgb(MaterialDynamicColors().textSecondaryAndTertiaryInverse())
-
-  val textPrimaryInverseDisableOnly: Int
-    get() = getArgb(MaterialDynamicColors().textPrimaryInverseDisableOnly())
-
-  val textSecondaryAndTertiaryInverseDisabled: Int
-    get() = getArgb(MaterialDynamicColors().textSecondaryAndTertiaryInverseDisabled())
-
-  val textHintInverse: Int
-    get() = getArgb(MaterialDynamicColors().textHintInverse())
 
   companion object {
     val DEFAULT_SPEC_VERSION = SpecVersion.SPEC_2021

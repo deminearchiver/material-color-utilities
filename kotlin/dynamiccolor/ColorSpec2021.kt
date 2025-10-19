@@ -18,6 +18,8 @@ package dynamiccolor
 import contrast.Contrast
 import dislike.DislikeAnalyzer
 import dynamiccolor.DynamicScheme.Platform
+import dynamiccolor.ToneDeltaPair.DeltaConstraint
+import dynamiccolor.ToneDeltaPair.TonePolarity
 import hct.Hct
 import palettes.TonalPalette
 import temperature.TemperatureCache
@@ -314,7 +316,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(3.0, 4.5, 7.0, 7.0) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(primaryContainer(), primary(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          primaryContainer(),
+          primary(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -356,7 +365,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(1.0, 1.0, 3.0, 4.5) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(primaryContainer(), primary(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          primaryContainer(),
+          primary(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -401,7 +417,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(3.0, 4.5, 7.0, 7.0) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(secondaryContainer(), secondary(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          secondaryContainer(),
+          secondary(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -449,7 +472,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(1.0, 1.0, 3.0, 4.5) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(secondaryContainer(), secondary(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          secondaryContainer(),
+          secondary(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -490,7 +520,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(3.0, 4.5, 7.0, 7.0) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(tertiaryContainer(), tertiary(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          tertiaryContainer(),
+          tertiary(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -533,7 +570,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(1.0, 1.0, 3.0, 4.5) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(tertiaryContainer(), tertiary(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          tertiaryContainer(),
+          tertiary(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -568,7 +612,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(3.0, 4.5, 7.0, 7.0) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(errorContainer(), error(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          errorContainer(),
+          error(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -596,7 +647,14 @@ open class ColorSpec2021 : ColorSpec {
       .setBackground(this::highestSurface)
       .setContrastCurve { s: DynamicScheme -> ContrastCurve(1.0, 1.0, 3.0, 4.5) }
       .setToneDeltaPair { s: DynamicScheme ->
-        ToneDeltaPair(errorContainer(), error(), 10.0, TonePolarity.NEARER, false)
+        ToneDeltaPair(
+          errorContainer(),
+          error(),
+          10.0,
+          TonePolarity.RELATIVE_LIGHTER,
+          stayTogether = false,
+          constraint = DeltaConstraint.NEARER,
+        )
       }
       .build()
   }
@@ -777,105 +835,6 @@ open class ColorSpec2021 : ColorSpec {
   }
 
   // ////////////////////////////////////////////////////////////////
-  // Android-only Colors //
-  // ////////////////////////////////////////////////////////////////
-  /**
-   * These colors were present in Android framework before Android U, and used by MDC controls. They
-   * should be avoided, if possible. It's unclear if they're used on multiple backgrounds, and if
-   * they are, they can't be adjusted for contrast.* For now, they will be set with no background,
-   * and those won't adjust for contrast, avoiding issues.
-   * * For example, if the same color is on a white background _and_ black background, there's no
-   *   way to increase contrast with either without losing contrast with the other.
-   */
-  // colorControlActivated documented as colorAccent in M3 & GM3.
-  // colorAccent documented as colorSecondary in M3 and colorPrimary in GM3.
-  // Android used Material's Container as Primary/Secondary/Tertiary at launch.
-  // Therefore, this is a duplicated version of Primary Container.
-  override fun controlActivated(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("control_activated")
-      .setPalette { s: DynamicScheme -> s.primaryPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 30.0 else 90.0 }
-      .setIsBackground(true)
-      .build()
-  }
-
-  // colorControlNormal documented as textColorSecondary in M3 & GM3.
-  // In Material, textColorSecondary points to onSurfaceVariant in the non-disabled state,
-  // which is Neutral Variant T30/80 in light/dark.
-  override fun controlNormal(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("control_normal")
-      .setPalette { s: DynamicScheme -> s.neutralVariantPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 80.0 else 30.0 }
-      .build()
-  }
-
-  // colorControlHighlight documented, in both M3 & GM3:
-  // Light mode: #1f000000 dark mode: #33ffffff.
-  // These are black and white with some alpha.
-  // 1F hex = 31 decimal; 31 / 255 = 12% alpha.
-  // 33 hex = 51 decimal; 51 / 255 = 20% alpha.
-  // DynamicColors do not support alpha currently, and _may_ not need it for this use case,
-  // depending on how MDC resolved alpha for the other cases.
-  // Returning black in dark mode, white in light mode.
-  override fun controlHighlight(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("control_highlight")
-      .setPalette { s: DynamicScheme -> s.neutralPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 100.0 else 0.0 }
-      .setOpacity { s: DynamicScheme -> if (s.isDark) 0.20 else 0.12 }
-      .build()
-  }
-
-  // textColorPrimaryInverse documented, in both M3 & GM3, documented as N10/N90.
-  override fun textPrimaryInverse(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("text_primary_inverse")
-      .setPalette { s: DynamicScheme -> s.neutralPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 10.0 else 90.0 }
-      .build()
-  }
-
-  // textColorSecondaryInverse and textColorTertiaryInverse both documented, in both M3 & GM3, as
-  // NV30/NV80
-  override fun textSecondaryAndTertiaryInverse(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("text_secondary_and_tertiary_inverse")
-      .setPalette { s: DynamicScheme -> s.neutralVariantPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 30.0 else 80.0 }
-      .build()
-  }
-
-  // textColorPrimaryInverseDisableOnly documented, in both M3 & GM3, as N10/N90
-  override fun textPrimaryInverseDisableOnly(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("text_primary_inverse_disable_only")
-      .setPalette { s: DynamicScheme -> s.neutralPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 10.0 else 90.0 }
-      .build()
-  }
-
-  // textColorSecondaryInverse and textColorTertiaryInverse in disabled state both documented,
-  // in both M3 & GM3, as N10/N90
-  override fun textSecondaryAndTertiaryInverseDisabled(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("text_secondary_and_tertiary_inverse_disabled")
-      .setPalette { s: DynamicScheme -> s.neutralPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 10.0 else 90.0 }
-      .build()
-  }
-
-  // textColorHintInverse documented, in both M3 & GM3, as N10/N90
-  override fun textHintInverse(): DynamicColor {
-    return DynamicColor.Builder()
-      .setName("text_hint_inverse")
-      .setPalette { s: DynamicScheme -> s.neutralPalette }
-      .setTone { s: DynamicScheme -> if (s.isDark) 10.0 else 90.0 }
-      .build()
-  }
-
-  // ////////////////////////////////////////////////////////////////
   // Other //
   // ////////////////////////////////////////////////////////////////
   override fun highestSurface(s: DynamicScheme): DynamicColor {
@@ -946,7 +905,7 @@ open class ColorSpec2021 : ColorSpec {
       val polarity = toneDeltaPair.polarity
       val stayTogether = toneDeltaPair.stayTogether
       val aIsNearer =
-        (polarity == TonePolarity.NEARER ||
+        (toneDeltaPair.constraint == DeltaConstraint.NEARER ||
           (polarity == TonePolarity.LIGHTER && !scheme.isDark) ||
           (polarity == TonePolarity.DARKER && !scheme.isDark))
       val nearer = if (aIsNearer) roleA else roleB
