@@ -4,6 +4,3 @@
 [submodule "rust"]
 	path = rust
 	url = git@github.com:deminearchiver/material-color-utilities-rust.git
-[submodule "dart"]
-	path = dart
-	url = git@github.com:deminearchiver/material-color-utilities-dart.git
